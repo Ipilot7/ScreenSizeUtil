@@ -128,13 +128,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "my_utils",
+      "name": "screensize_utils",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-26T08:20:00.149493Z",
+  "generated": "2023-04-26T08:35:24.228599Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }
