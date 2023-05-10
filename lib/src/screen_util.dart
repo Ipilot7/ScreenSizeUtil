@@ -3,7 +3,7 @@
  * email: zhuoyuan93@gmail.com
  */
 
-import 'dart:math' show min, max;
+import 'dart:math' show max, min, sqrt;
 import 'dart:ui' show FlutterView;
 import 'dart:async' show Completer;
 
@@ -194,13 +194,16 @@ class ScreenUtil {
 
   ///根据宽度或高度中的较小值进行适配
   ///Adapt according to the smaller of width or height
-  double radius(num r) => r * min(scaleWidth, scaleHeight);
+  double radius(num r) => sqrt(
+      r * r * screenWidth * screenHeight / (_uiSize.height * _uiSize.width));
 
   ///字体大小适配方法
   ///- [fontSize] UI设计上字体的大小,单位dp.
   ///Font size adaptation method
   ///- [fontSize] The size of the font on the UI design, in dp.
   double setSp(num fontSize) => fontSize * scaleText;
+
+  double setSpTest(num fontSize) => fontSize * screenHeight / _uiSize.height;
 
   Widget setVerticalSpacing(num height) => SizedBox(height: setHeight(height));
 
